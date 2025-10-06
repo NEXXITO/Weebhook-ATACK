@@ -1,6 +1,7 @@
 import requests
 import time
-#Made by MEXXIR
+#Made by SAUL
+
 
 try:
     print("Bienvenido al WEEBHOOK SPAMMER ( Made by MEXIR)")
