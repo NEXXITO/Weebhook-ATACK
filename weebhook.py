@@ -1,29 +1,42 @@
-import requests
 import time
-#Made by SAUL
+import datetime
+import requests
+import os
+print("Bienvendio a WEBHOOKS ATACKER")
+hora = datetime.datetime.now()
+print(hora)  
+print("github: NEXXITO")
+KEY = "MEXIR"
+CLAVE = input("iNTRODUCE LA KEY [MEXIR] PARA VERIFICAR QUE NO ERES UN ROBOT : ")
 
-
-try:
-    print("Bienvenido al WEEBHOOK SPAMMER ( Made by MEXIR)")
-
-    USUARIO = input("Ingrese el lINK de su webhook:  ")
-
-
-    link =input("Ingrese mensaje o link a espamear:  ")
-#mejorar esto xd
-except :
-    print("Error")
+if KEY == CLAVE:
+    
+    print("VERIFICACION COMPLETADA")
     time.sleep(2)
+    os.system("cls")
+
+    
+
+
+else:
+    print("La clave es incorrecta")
+    time.sleep(2)
+    os.system("cls")
+    exit()
+
+
+print("Ataca a una webhook(DC)")
+try:
+   WEEBHOOK = input("Introduce URL  de la webhook:  ")
+   link = input("Introduce el link que quieres spamear:  ")
+
+
+   requests.post(WEEBHOOK , json={"content": link})
+except:
+    print("Algo no ha ido bien")
     exit()
 
 
 
 
-print("Atacando webhook...")
-time.sleep(2)
-while True:
-   requests.post(USUARIO, json={"content": link})
 
-   print("Enviando ataque HTTP...")
-    
-#AÑADIR MANEJO DE ERRORES complejo  (ME DA PEREZA)
