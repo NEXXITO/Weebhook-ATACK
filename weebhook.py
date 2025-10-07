@@ -27,16 +27,12 @@ else:
 
 print("Ataca a una webhook(DC)")
 try:
+  
    WEEBHOOK = input("Introduce URL  de la webhook:  ")
    link = input("Introduce el link que quieres spamear:  ")
 
-
-   requests.post(WEEBHOOK , json={"content": link})
+   while True :
+    requests.post(WEEBHOOK , json={"content": link})
 except:
     print("Algo no ha ido bien")
     exit()
-
-
-
-
-
